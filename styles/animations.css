@@ -13,50 +13,11 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-.theme-menu__button:disabled::before {
-  content: "▶";
-  opacity: 0.6;
-  color: var(--text-color, #000);
-  font-family: "Press Start 2P";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-transform: uppercase;
-
-  position: absolute;
-  animation: pointer 0.5s ease-in-out infinite alternate;
-}
-
-@keyframes pointer {
-  from {
-    transform: translateX(-20px);
-  }
-
-  to {
-    transform: translateX(-16px);
-  }
-}
-
-.theme-menu__button:focus-visible::after {
-  content: "";
-  width: 100%;
-  height: 2px;
-  display: block;
-  background-color: var(--text-color);
-  animation: underline 0.5s ease;
-  opacity: 0.5;
-  transform-origin: left;
-}
-
-@keyframes underline {
-  from {
-    scale: 0;
-  }
-  to {
-    scale: 1;
-  }
-}
+/* необходимо реализовать переходя с параметрами по заданию для 
+.like-icon .contour
+like-icon .core
+.like-icon .main-body 
+переходы вроде бы ниже реализованы */
 
 .like-icon {
   display: flex;
@@ -66,7 +27,7 @@
 
 .like-icon:hover .core {
   fill: var(--heart-contour-color);
-  transition: fill 0.3s linear 0.03s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
@@ -76,31 +37,31 @@
 
 .like-icon:active .core {
   fill: var(--heart-color);
-  transition: fill 0.3s linear 0.03s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
   fill: var(--heart-color);
-  transition: fill 0.3s linear 0.03s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .core {
   fill: var(--heart-color);
-  transition: fill 0.3s linear 0.03s;
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--heart-color);
-  transition: fill 0.3s linear 0.03s;
+  transition: fill 0.3s linear 0.05s;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--heart-color);
-  transition: fill 0.3s linear 0.03s;
+  transition: fill 0.3s linear 0.06s;
 }
 
 .like-icon.is-liked .sparks {
-  animation: spark-visibility 0.3s ease-in 0.3s alternate-reverse;
+  animation: spark-visibility 0.3s ease-in 0.3s alternate;
 }
 
 @keyframes spark-visibility {
@@ -110,35 +71,12 @@
 }
 
 .like-icon.is-liked .heart {
-  animation: heart-scale 0.3s ease-in 0.1s  alternate-reverse;
+  animation: heart-scale 0.3s ease-in 0.1s alternate;
   transform-origin: center;
 }
 
 @keyframes heart-scale {
   to {
     scale: 1.5;
-  }
-}
-
-.card__like-button::before, .footer__button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: var(--save-button-color);
-  mix-blend-mode: difference;
-  translate: -100% 0%;
-  z-index: 2;
-}
-.card__like-button:hover::before, .footer__button:hover::before {
-  animation: move 3s linear forwards;
-}
-
-@keyframes move {
-  from {
-    translate: -100% 0%;
-  }
-
-  to {
-    translate: 0% 0%;
   }
 }
