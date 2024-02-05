@@ -19,6 +19,7 @@
   --save-button-color: #00cc14;
   --font-weight-title: 785;
   --font-weight-paragraph: 465;
+  --text-color-hover: #00cc14;
 }
 
 :root.theme-light {
@@ -35,6 +36,7 @@
   --save-button-color: white;
   --font-weight-title: 700;
   --font-weight-paragraph: 400;
+  --text-color-hover: white;
 }
 
 @media (prefers-color-scheme: light) {
@@ -52,6 +54,7 @@
     --save-button-color: white;
     --font-weight-title: 700;
     --font-weight-paragraph: 400;
+    --text-color-hover: white;
   }
 }
 
@@ -70,5 +73,6 @@
     --save-button-color: #00cc14;
     --font-weight-title: 785;
     --font-weight-paragraph: 465;
+    --text-color-hover: #00cc14;
   }
 }
