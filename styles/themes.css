@@ -17,6 +17,8 @@
   --text-color: #00cc14;
   --heart-contour-color: #00cc14;
   --save-button-color: #00cc14;
+  --font-weight-title: 785;
+  --font-weight-paragraph: 465;
 }
 
 :root.theme-light {
@@ -31,6 +33,8 @@
   --text-color: #000000;
   --heart-contour-color: #000000;
   --save-button-color: white;
+  --font-weight-title: 700;
+  --font-weight-paragraph: 400;
 }
 
 @media (prefers-color-scheme: light) {
@@ -45,6 +49,9 @@
     --background-color: #ffffff;
     --text-color: #000000;
     --heart-contour-color: #000000;
+    --save-button-color: white;
+    --font-weight-title: 700;
+    --font-weight-paragraph: 400;
   }
 }
 
@@ -60,5 +67,8 @@
     --background-color: #000000;
     --text-color: #00cc14;
     --heart-contour-color: #00cc14;
+    --save-button-color: #00cc14;
+    --font-weight-title: 785;
+    --font-weight-paragraph: 465;
   }
 }

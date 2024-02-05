@@ -22,8 +22,8 @@
   background-position: center;
   background-attachment: fixed;
   background-color: var(--background-color);
-  font-family: var(--font-main);
-  font-variation-settings: "wght" 400;
+  font-family: var(--font-main), monospace, sans-serif;
+  font-variation-settings: "wght" var(--font-weight-paragraph);
 }
 
 .header {
@@ -147,7 +147,7 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  font-variation-settings: "wght" 700;
+  font-variation-settings: "wght" var(--font-weight-title);
   line-height: normal;
 
   margin-bottom: 5px;
@@ -201,8 +201,12 @@
 }
 
 .card__text {
-  margin-bottom: 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  /* margin-bottom: 27px; */
   margin-left: 22px;
+  margin-bottom: 25px;
 }
 
 .card__text-bottom {
@@ -232,6 +236,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: center;
+  justify-self: center;
   background: transparent;
   border: none;
   transition: border 0.3s ease;
@@ -242,10 +248,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.sparks {
-  opacity: 0;
+  align-self: center;
+  justify-self: center;
+  margin-right: 4px;
 }
 
 .card__like-button {
@@ -320,6 +325,7 @@
   color: var(--text-color);
   cursor: pointer;
   overflow: hidden;
+  margin-bottom: 103px;
 }
 
 /* .footer__button:focus-visible {
@@ -350,6 +356,8 @@
   justify-content: center;
   background-color: var(--background-color);
   color: var(--text-color);
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .dialog::backdrop {
@@ -391,6 +399,7 @@
   width: 293px;
   height: 38px;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .dialog__button__text {
@@ -457,8 +466,22 @@
   }
 
   .card__text {
-    margin-bottom: 23px;
-    margin-right: 30px;
+    gap: 30px;
+    margin-bottom: 40px;
+    /* margin-right: 30px; */
+  }
+
+  .card__text__fifth {
+    gap: 50px;
+    /* margin-bottom: 60px; */
+  }
+  .card__text__sixth {
+    gap: 5px;
+  }
+  .card__text__seventh {
+  }
+
+  .card__text__eight {
   }
 
   .main {
@@ -471,6 +494,10 @@
 
   .card__buttons__prelast {
     margin-top: 30px;
+  }
+
+  .footer__button {
+    margin-bottom: 100px;
   }
 }
 
@@ -521,8 +548,8 @@
   }
 }
 
-.card__like-button::before,
-.footer__button::before {
+/* .card__like-button::before, */
+.button__anim::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -531,8 +558,8 @@
   translate: -100% 0%;
   z-index: 2;
 }
-.card__like-button:hover::before,
-.footer__button:hover::before {
+/* .card__like-button:hover::before, */
+.button__anim:hover::before {
   animation: move 3s linear forwards;
 }
 
